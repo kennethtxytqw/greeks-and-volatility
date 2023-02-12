@@ -16,10 +16,4 @@
   open = true
 [notifications]
   versionUpdates = ["latest"]
-[build]
-  command = "yarn rw deploy netlify --prisma=false --dm=false"
-  publish = "web/dist"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+
