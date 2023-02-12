@@ -12,6 +12,8 @@ import { Router, Route } from '@redwoodjs/router'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/" page={VolatilityIndexPage} name="home" />
+      <Route path="/volatility-index" page={VolatilityIndexPage} name="volatilityIndex" />
       <Route notfound page={NotFoundPage} />
     </Router>
   )
