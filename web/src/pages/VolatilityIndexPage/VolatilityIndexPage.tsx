@@ -1,19 +1,28 @@
-import { Link, routes } from '@redwoodjs/router'
+import { Box } from '@chakra-ui/react'
+
 import { MetaTags } from '@redwoodjs/web'
 
+import Chart from 'src/components/Chart/Chart'
 const VolatilityIndexPage = () => {
   return (
     <>
       <MetaTags title="VolatilityIndex" description="VolatilityIndex page" />
-
-      <h1>VolatilityIndexPage</h1>
       <p>
-        Find me in <code>./web/src/pages/VolatilityIndexPage/VolatilityIndexPage.tsx</code>
+        This is a real time chart. It will update as new data comes in. It will
+        also update the volatility index as new data comes in.
       </p>
       <p>
-        My default route is named <code>volatilityIndex</code>, link to me with `
-        <Link to={routes.volatilityIndex()}>VolatilityIndex</Link>`
+        Historical index price data on deribit are in 6 hours intervals, the
+        chart will only move the timescale every 6 hours.
       </p>
+      <p>
+        If you zoom into the latest price data, the chart is actually updating
+        its latest price in real time via websocket.
+      </p>
+      <p>Orange is volatility index, blue is price index.</p>
+      <Box w="100%" h="500px">
+        <Chart />
+      </Box>
     </>
   )
 }
