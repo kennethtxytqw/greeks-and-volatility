@@ -7821,15 +7821,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"api@workspace:api":
-  version: 0.0.0-use.local
-  resolution: "api@workspace:api"
-  dependencies:
-    "@redwoodjs/api": 4.1.2
-    "@redwoodjs/graphql-server": 4.1.2
-  languageName: unknown
-  linkType: soft
-
 "apollo-datasource@npm:^3.3.2":
   version: 3.3.2
   resolution: "apollo-datasource@npm:3.3.2"
