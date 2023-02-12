@@ -8,7 +8,7 @@
 [web]
   title = "Redwood App"
   port = 8910
-  apiUrl = "/.redwood/functions" # you can customise graphql and dbauth urls individually too: see https://redwoodjs.com/docs/app-configuration-redwood-toml#api-paths
+  apiUrl = "/.netlify/functions"
   includeEnvironmentVariables = [] # any ENV vars that should be available to the web side, see https://redwoodjs.com/docs/environment-variables#web
 [api]
   port = 8911
@@ -16,3 +16,10 @@
   open = true
 [notifications]
   versionUpdates = ["latest"]
+[build]
+  command = "yarn rw deploy netlify --prisma=false --dm=false"
+  publish = "web/dist"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
